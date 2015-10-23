@@ -1,0 +1,44 @@
+/*
+Name:Anand Akshay
+Section:C
+IDE:Microsoft Visual Studio 2013
+Processor:5th Gen i7 core processor
+
+About the program:
+The program crosses out all the numbers that are multiples of 2,3,4....... till 100. It then prints out the the uncrossed numbers which are nothing but prime numbers.
+*/
+#include<iostream>
+using namespace std;
+
+
+void main()
+{
+	//Main Array initialized to 0
+	int arr	[10000] = { 0 };
+
+	//Crossing out all the multiples of 2 till 100
+	for (int k = 2; k <= 100; k++)
+	{
+
+			for (int i = 2*k-1; i < 10000; i = i + k)
+			{
+
+				arr[i] = 1;
+			}
+		
+	}
+
+	cout << "The prime numbers till 10000 are: " << '\n';
+	//Printing the uncrossed numbers using the loop variable.
+	for (int j = 0; j < 10000; j++)
+	{
+		//Printing the uncrossed numbers
+		if (arr[j] != 1){
+			cout << j + 1 << " ";
+		}
+	}
+	
+	system("pause");
+	
+
+} 

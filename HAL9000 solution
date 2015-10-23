@@ -30,7 +30,7 @@ void main()
 
 	cout << "The prime numbers till 10000 are: " << '\n';
 	//Printing the uncrossed numbers using the loop variable.
-	for (int j = 0; j < 10000; j++)
+	for (int j = 1; j < 10000; j++)
 	{
 		//Printing the uncrossed numbers
 		if (arr[j] != 1){
